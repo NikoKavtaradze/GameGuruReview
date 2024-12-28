@@ -1,0 +1,506 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+
+    b{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+    header {
+        position: relative;
+        background-color: rgb(30, 30, 30);
+        height: 9vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        min-height: 70px;
+        justify-content: center;
+
+        #ListIcon {
+            height: 30px;
+            cursor: pointer;
+            display: none;
+
+        }
+
+        b {
+            color: white;
+            font-weight: bold;
+        }
+
+        #L-D-Frame {
+            display: flex;
+            align-items: center;
+            width: 10%;
+            justify-content: space-evenly;
+
+            #main_logo_a {
+
+                #main_logo {
+                    max-height: 60px;
+                }
+            }
+
+            #line {
+                background-color: rgb(48, 48, 52, );
+                height: 50px;
+                width: 4px;
+                border-radius: 2px;
+            }
+        }
+
+        #items {
+            width: 60%;
+            display: flex;
+            justify-content: space-around;
+
+
+            .item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                height: 40px;
+                width: 110px;
+                border-radius: 8px;
+                transition: background-color 0.5s, color 0.5s;
+
+                a {
+                    color: white;
+                    width: 90px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            .item:hover {
+                background-color: white;
+                color: black;
+                border-radius: 8px;
+
+                a {
+                    color: black;
+                }
+            }
+        }
+
+        #search {
+            input {
+                padding: 15px;
+                width: 300px;
+                border-radius: 50px;
+                background-color: rgb(32, 32, 32);
+                border: 0px;
+                color: white;
+                letter-spacing: 1px;
+
+            }
+
+            input:focus {
+                background-color: rgb(40, 40, 40);
+                outline: 0px;
+            }
+        }
+
+        #SearchIcon_mobile {
+            display: none;
+        }
+
+        #L-P-Frame {
+            display: flex;
+            flex-direction: row;
+            width: 12%;
+            justify-content: space-evenly;
+            align-items: center;
+
+            #LanguageIcon {
+                height: 25px;
+                cursor: pointer;
+                padding: 5px;
+                border-radius: 50%;
+            }
+
+            #LanguageIcon:hover {
+                padding: 5px;
+                background-color: rgb(100, 100, 100);
+                border-radius: 50%;
+                transition: 0.5s;
+            }
+
+            #ProfileIcon {
+                height: 25px;
+                cursor: pointer;
+                border-radius: 50%;
+                padding: 5px;
+            }
+
+            #ProfileIcon:hover {
+                background-color: rgb(100, 100, 100);
+                transition: 0.5s;
+                border-radius: 50%;
+                padding: 5px;
+            }
+
+            #SearchIcon_mobile_frame {
+                #searchMobile {
+                    display: none;
+                    transition: 0.3s;
+                }
+
+                #SearchIcon {
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+
+    #divsThatDoesNotShowUntilClick {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+
+        #ChangeLanguage {
+            background-color: rgb(26, 26, 30);
+            border-radius: 15px;
+            width: 200px;
+            height: 120px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            padding: 10px 20px;
+            right: 0px;
+            top: 0px;
+            position: absolute;
+            display: none;
+            transition: 0.3s;
+            z-index: 1000;
+
+            #Georgian {
+                background-color: rgb(36, 36, 36);
+                padding: 10px;
+                border-radius: 15px;
+                width: 180px;
+                margin-bottom: 20px;
+                cursor: pointer;
+            }
+
+            #Georgian:hover {
+                background-color: rgb(50, 50, 50);
+            }
+
+            #English {
+                width: 180px;
+                padding: 10px;
+                border-radius: 15px;
+                background-color: rgb(36, 36, 36);
+                cursor: pointer;
+            }
+
+            #English:hover {
+                background-color: rgb(50, 50, 50);
+
+            }
+
+            div {
+                b {
+                    font-weight: bold;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                }
+            }
+        }
+
+        #profile {
+            background-color: rgb(26, 26, 30);
+            border-radius: 15px;
+            width: 200px;
+            height: 120px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            padding: 10px 20px;
+            right: 0px;
+            top: 0px;
+            position: absolute;
+            display: none;
+            transition: 0.3s;
+            z-index: 1000;
+
+
+            #Registration {
+                background-color: rgb(36, 36, 36);
+                padding: 10px;
+                border-radius: 15px;
+                width: 180px;
+                margin-bottom: 20px;
+                color: white;
+
+                #reg-link {
+                    position: sticky;
+                    z-index: 9;
+                }
+            }
+
+            #Registration:hover {
+                background-color: rgb(50, 50, 50);
+
+            }
+
+            #Log-in {
+                width: 180px;
+                padding: 10px;
+                border-radius: 15px;
+                background-color: rgb(36, 36, 36);
+                color: white;
+
+                #log-link {
+                    position: relative;
+                    z-index: 9;
+                }
+            }
+
+            #Log-in:hover {
+                background-color: rgb(50, 50, 50);
+            }
+
+            div {
+                b {
+                    font-weight: bold;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                }
+            }
+        }
+
+        #menu {
+            position: absolute;
+            background-color: rgb(26, 26, 30);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            width: 400px;
+            height: fit-content;
+            margin: 10px;
+            display: none;
+            transition: 0.3s;
+            z-index: 1000;
+            padding-bottom: 20px;
+
+            .menu_div {
+                margin: 20px;
+                background-color: rgb(36, 36, 36);
+                border-radius: 15px;
+
+                b {
+                    font-weight: bold;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+                    a {
+                        color: white;
+                        width: 95%;
+                        padding: 20px 0px 20px 15px;
+                    }
+                }
+            }
+
+            .menu_div:hover {
+                background-color: rgb(50, 50, 50);
+            }
+
+            .autorisation-div {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                margin-bottom: 20px;
+
+                .mob-reg-divs {
+                    display: flex;
+                    text-align: center;
+                    background-color: rgb(36, 36, 36);
+                    width: 40%;
+                    border-radius: 15px;
+
+                    a {
+                        padding: 20px 0px 20px 0px;
+                        width: 100%;
+                        color: white;
+                        font-weight: bold;
+                    }
+                }
+
+                .mob-reg-divs:hover {
+                    background-color: white;
+
+                    a {
+                        color: black;
+                    }
+                }
+            }
+
+            .ChangeLanguage-mobile {
+                height: 60px;
+                width: 90%;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+
+                #GE {
+                    display: flex;
+                    background-color: rgb(36, 36, 36);
+                    border-radius: 15px;
+                    width: 45%;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+
+                    a {
+                        b {
+                            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                            font-weight: bold;
+
+                        }
+                    }
+                }
+
+                #GE:hover {
+                    background-color: white;
+
+                    a {
+                        b {
+                            color: black;
+                        }
+                    }
+                }
+
+                #EN {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgb(36, 36, 36);
+                    border-radius: 15px;
+                    width: 45%;
+                    cursor: pointer;
+
+                    a {
+                        b {
+                            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                #EN:hover {
+                    background-color: white;
+
+                    a {
+                        b {
+                            color: black;
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+
+}
+
+
+@media(max-width:1024px){
+    body{
+        header{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            #ListIcon{
+                display: flex;
+                margin-left: 3%;
+            }
+            
+
+            #L-P-Frame{
+                width: fit-content;
+                display: flex;
+                justify-content: space-around;
+                width: 35%;
+                margin-right: 3%;
+
+                #LanguageIcon{
+                    display: none;
+                }
+
+                #ProfileIcon{
+                    display: none;
+                }
+
+                #SearchIcon_mobile_frame{  
+                    width: 100%; 
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+
+                    #searchMobile{
+                        padding: 15px;
+                        border-radius: 50px;
+                        background-color: rgb(32, 32, 32);
+                        width: 100%;
+                        border: 0px;
+                        color: white;
+                        letter-spacing: 1px;
+                        display: none;
+                    }
+                    #SearchIcon_mobile{
+                        cursor: pointer;
+                    }
+                }
+
+                img{
+                    margin: 5px;
+                }
+            }
+            #L-D-Frame{
+                width: 128px;
+                justify-content: center;
+
+                #main_logo_a{
+                    #main_logo{
+                        position: absolute;
+                        top: 6px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        
+                    }
+                }
+                
+                #line{
+                    display: none;
+                }
+            }
+
+            #SearchIcon_mobile{
+                align-items: center;
+                display: flex;
+                height: 30px;
+                margin-right: 3%;
+            }
+            #items{
+                display: none;
+            }
+            #search{
+                display: none;
+            }
+        }
+    }
+}

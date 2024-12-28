@@ -1,0 +1,406 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+}
+body b {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body header {
+  position: relative;
+  background-color: rgb(30, 30, 30);
+  height: 9vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+  justify-content: center;
+}
+body header #ListIcon {
+  height: 30px;
+  cursor: pointer;
+  display: none;
+}
+body header b {
+  color: white;
+  font-weight: bold;
+}
+body header #L-D-Frame {
+  display: flex;
+  align-items: center;
+  width: 10%;
+  justify-content: space-evenly;
+}
+body header #L-D-Frame #main_logo_a #main_logo {
+  max-height: 60px;
+}
+body header #L-D-Frame #line {
+  background-color: rgb(48, 48, 52);
+  height: 50px;
+  width: 4px;
+  border-radius: 2px;
+}
+body header #items {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+body header #items .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 40px;
+  width: 110px;
+  border-radius: 8px;
+  transition: background-color 0.5s, color 0.5s;
+}
+body header #items .item a {
+  color: white;
+  width: 90px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body header #items .item:hover {
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+}
+body header #items .item:hover a {
+  color: black;
+}
+body header #search input {
+  padding: 15px;
+  width: 300px;
+  border-radius: 50px;
+  background-color: rgb(32, 32, 32);
+  border: 0px;
+  color: white;
+  letter-spacing: 1px;
+}
+body header #search input:focus {
+  background-color: rgb(40, 40, 40);
+  outline: 0px;
+}
+body header #SearchIcon_mobile {
+  display: none;
+}
+body header #L-P-Frame {
+  display: flex;
+  flex-direction: row;
+  width: 12%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body header #L-P-Frame #LanguageIcon {
+  height: 25px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+}
+body header #L-P-Frame #LanguageIcon:hover {
+  padding: 5px;
+  background-color: rgb(100, 100, 100);
+  border-radius: 50%;
+  transition: 0.5s;
+}
+body header #L-P-Frame #ProfileIcon {
+  height: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 5px;
+}
+body header #L-P-Frame #ProfileIcon:hover {
+  background-color: rgb(100, 100, 100);
+  transition: 0.5s;
+  border-radius: 50%;
+  padding: 5px;
+}
+body header #L-P-Frame #SearchIcon_mobile_frame #searchMobile {
+  display: none;
+  transition: 0.3s;
+}
+body header #L-P-Frame #SearchIcon_mobile_frame #SearchIcon {
+  cursor: pointer;
+}
+body #divsThatDoesNotShowUntilClick {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+body #divsThatDoesNotShowUntilClick #ChangeLanguage {
+  background-color: rgb(26, 26, 30);
+  border-radius: 15px;
+  width: 200px;
+  height: 120px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px 20px;
+  right: 0px;
+  top: 0px;
+  position: absolute;
+  display: none;
+  transition: 0.3s;
+  z-index: 1000;
+}
+body #divsThatDoesNotShowUntilClick #ChangeLanguage #Georgian {
+  background-color: rgb(36, 36, 36);
+  padding: 10px;
+  border-radius: 15px;
+  width: 180px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+body #divsThatDoesNotShowUntilClick #ChangeLanguage #Georgian:hover {
+  background-color: rgb(50, 50, 50);
+}
+body #divsThatDoesNotShowUntilClick #ChangeLanguage #English {
+  width: 180px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgb(36, 36, 36);
+  cursor: pointer;
+}
+body #divsThatDoesNotShowUntilClick #ChangeLanguage #English:hover {
+  background-color: rgb(50, 50, 50);
+}
+body #divsThatDoesNotShowUntilClick #ChangeLanguage div b {
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body #divsThatDoesNotShowUntilClick #profile {
+  background-color: rgb(26, 26, 30);
+  border-radius: 15px;
+  width: 200px;
+  height: 120px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px 20px;
+  right: 0px;
+  top: 0px;
+  position: absolute;
+  display: none;
+  transition: 0.3s;
+  z-index: 1000;
+}
+body #divsThatDoesNotShowUntilClick #profile #Registration {
+  background-color: rgb(36, 36, 36);
+  padding: 10px;
+  border-radius: 15px;
+  width: 180px;
+  margin-bottom: 20px;
+  color: white;
+}
+body #divsThatDoesNotShowUntilClick #profile #Registration #reg-link {
+  position: sticky;
+  z-index: 9;
+}
+body #divsThatDoesNotShowUntilClick #profile #Registration:hover {
+  background-color: rgb(50, 50, 50);
+}
+body #divsThatDoesNotShowUntilClick #profile #Log-in {
+  width: 180px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgb(36, 36, 36);
+  color: white;
+}
+body #divsThatDoesNotShowUntilClick #profile #Log-in #log-link {
+  position: relative;
+  z-index: 9;
+}
+body #divsThatDoesNotShowUntilClick #profile #Log-in:hover {
+  background-color: rgb(50, 50, 50);
+}
+body #divsThatDoesNotShowUntilClick #profile div b {
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body #divsThatDoesNotShowUntilClick #menu {
+  position: absolute;
+  background-color: rgb(26, 26, 30);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 400px;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 10px;
+  display: none;
+  transition: 0.3s;
+  z-index: 1000;
+  padding-bottom: 20px;
+}
+body #divsThatDoesNotShowUntilClick #menu .menu_div {
+  margin: 20px;
+  background-color: rgb(36, 36, 36);
+  border-radius: 15px;
+}
+body #divsThatDoesNotShowUntilClick #menu .menu_div b {
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body #divsThatDoesNotShowUntilClick #menu .menu_div b a {
+  color: white;
+  width: 95%;
+  padding: 20px 0px 20px 15px;
+}
+body #divsThatDoesNotShowUntilClick #menu .menu_div:hover {
+  background-color: rgb(50, 50, 50);
+}
+body #divsThatDoesNotShowUntilClick #menu .autorisation-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+body #divsThatDoesNotShowUntilClick #menu .autorisation-div .mob-reg-divs {
+  display: flex;
+  text-align: center;
+  background-color: rgb(36, 36, 36);
+  width: 40%;
+  border-radius: 15px;
+}
+body #divsThatDoesNotShowUntilClick #menu .autorisation-div .mob-reg-divs a {
+  padding: 20px 0px 20px 0px;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+}
+body #divsThatDoesNotShowUntilClick #menu .autorisation-div .mob-reg-divs:hover {
+  background-color: white;
+}
+body #divsThatDoesNotShowUntilClick #menu .autorisation-div .mob-reg-divs:hover a {
+  color: black;
+}
+body #divsThatDoesNotShowUntilClick #menu .ChangeLanguage-mobile {
+  height: 60px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+body #divsThatDoesNotShowUntilClick #menu .ChangeLanguage-mobile #GE {
+  display: flex;
+  background-color: rgb(36, 36, 36);
+  border-radius: 15px;
+  width: 45%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+body #divsThatDoesNotShowUntilClick #menu .ChangeLanguage-mobile #GE a b {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+}
+body #divsThatDoesNotShowUntilClick #menu .ChangeLanguage-mobile #GE:hover {
+  background-color: white;
+}
+body #divsThatDoesNotShowUntilClick #menu .ChangeLanguage-mobile #GE:hover a b {
+  color: black;
+}
+body #divsThatDoesNotShowUntilClick #menu .ChangeLanguage-mobile #EN {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(36, 36, 36);
+  border-radius: 15px;
+  width: 45%;
+  cursor: pointer;
+}
+body #divsThatDoesNotShowUntilClick #menu .ChangeLanguage-mobile #EN a b {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+}
+body #divsThatDoesNotShowUntilClick #menu .ChangeLanguage-mobile #EN:hover {
+  background-color: white;
+}
+body #divsThatDoesNotShowUntilClick #menu .ChangeLanguage-mobile #EN:hover a b {
+  color: black;
+}
+
+@media (max-width: 1024px) {
+  body header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  body header #ListIcon {
+    display: flex;
+    margin-left: 3%;
+  }
+  body header #L-P-Frame {
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+    margin-right: 3%;
+  }
+  body header #L-P-Frame #LanguageIcon {
+    display: none;
+  }
+  body header #L-P-Frame #ProfileIcon {
+    display: none;
+  }
+  body header #L-P-Frame #SearchIcon_mobile_frame {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  body header #L-P-Frame #SearchIcon_mobile_frame #searchMobile {
+    padding: 15px;
+    border-radius: 50px;
+    background-color: rgb(32, 32, 32);
+    width: 100%;
+    border: 0px;
+    color: white;
+    letter-spacing: 1px;
+    display: none;
+  }
+  body header #L-P-Frame #SearchIcon_mobile_frame #SearchIcon_mobile {
+    cursor: pointer;
+  }
+  body header #L-P-Frame img {
+    margin: 5px;
+  }
+  body header #L-D-Frame {
+    width: 128px;
+    justify-content: center;
+  }
+  body header #L-D-Frame #main_logo_a #main_logo {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  body header #L-D-Frame #line {
+    display: none;
+  }
+  body header #SearchIcon_mobile {
+    align-items: center;
+    display: flex;
+    height: 30px;
+    margin-right: 3%;
+  }
+  body header #items {
+    display: none;
+  }
+  body header #search {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
