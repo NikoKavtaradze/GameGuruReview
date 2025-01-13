@@ -2,7 +2,12 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: red;
+  background-color: rgb(22, 22, 22);
+}
+body #Create_Review_Form_For_Reviews_Page {
+  min-height: 100vh;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
 }
 body main {
   flex: 1;
