@@ -12,7 +12,7 @@
 
 <body>
     <div id="wrapper">
-        <a href="index.html">
+        <a href="MainPage.php">
             <img src="../Images/Logo images/logo.png" alt="Game Guru Reviews Logo">
         </a>
         <h1>
@@ -25,9 +25,20 @@
                 <input type="text" name="nickname" placeholder="Nickname/Email">
             </div>
             <div class="ns">
-                <input type="email" name="email" placeholder="Password">
+                <input type="password" name="password" placeholder="Password">
             </div>
             <button id="submitBtn" type="submit" name="submit">Log In</button>
+
+            <?php
+            if (isset($_GET["error"])) {
+                if ($_GET["error"] == "emptyinput") {
+                    echo "<p>Fill In All Fields!</p>";
+                }
+                 else if ($_GET["error"] == "userNotFound") {
+                    echo "<p>User Not Found!</p>";
+                }
+            }
+            ?>
         </form>
     </div>
     

@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <header>
     <!-- სიის აიკონი -->
     <img class="language_Profile_List" id="ListIcon" src="../Images/Icons/ListIcon.png" alt="List Icon">
@@ -115,19 +118,34 @@
             </b>
         </div>
         <div class="autorisation-div">
+            
             <div class="mob-reg-divs">
-                <a href="../Site/Registration.php">
-                    <b id="l">
-                        Register
-                    </b>
-                </a>
-            </div>
-            <div class="mob-reg-divs">
-                <a href="../Site/LogIn.php">
-                    <b id="m">
-                        Log In
-                    </b>
-                </a>
+                <?php
+                    if(isset($_SESSION["username"])){
+                        echo "<div class='mob-reg-divs'>
+                                <a href='../Site/LogIn.php'>
+                                    <b id='m'>
+                                        Log Out
+                                    </b>
+                                </a>
+                            </div>";
+                    }else{
+                        echo "<div class='mob-reg-divs'>
+                                <a href='../Site/Registration.php'>
+                                    <b id='l'>
+                                        Register
+                                    </b>
+                                </a>
+                            </div>
+                            <div class='mob-reg-divs'>
+                                <a href='../Site/LogIn.php'>
+                                    <b id='m'>
+                                        Log In
+                                    </b>
+                                </a>
+                            </div>";
+                    }
+                ?>
             </div>
         </div>
         <div class="ChangeLanguage-mobile">

@@ -77,3 +77,34 @@ function createUser($conn, $name, $email, $password){
     header("location: ../site/Registration.php?error=stmtFailed");
     exit();
 }
+
+function emptyInputLogIn($name, $password){
+    $result;
+    if (empty($name) || empty($password)) {
+        $result = true;
+    }else{
+        $result = false;
+    }
+    return $result;
+}
+function LoginUser($conn, $name, $password){
+    $userExists = usernameExists($conn, $name, $name);
+    if($userExists === false){
+        header("location: ../site/Login.php?error=userNotFound");
+        exit();
+    }
+    $passwordHashed = $userExists['password_hash'];
+    $checkPassword = password_verify($password, $passwordHashed);
+
+    if($checkPassword === false){
+        header("location: ../site/Login.php?error=wrongPassword");
+        exit();
+    }else if($checkPassword === true){
+        session_start();
+        $_SESSION['userID'] =  $userExists['user_id'];
+        $_SESSION['username'] =  $userExists['username'];
+
+        header("location: ../site/MainPage.php?error=userNotFound");
+        exit();
+    }
+}

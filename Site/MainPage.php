@@ -21,6 +21,6 @@
 
     <!-- ფუტერი --><?php include "../components/footer/footer.php";?><!-- /ფუტერი -->
 
-    <!-- სკრიპტი --> <script src="JavaScript/script.js"></script><!--/სკრიპტი -->
+    <!-- სკრიპტი --> <script src="../JavaScript/script.js"></script><!--/სკრიპტი -->
 </body>
 </html>
