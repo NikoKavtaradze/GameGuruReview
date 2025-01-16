@@ -1,14 +1,14 @@
 <?php
-if (isset($_POST["submitBtn"])) {
+if (isset($_POST["submit"])) {
 
     $name = $_POST["nickname"];
-    $email = $_POST["password"];
+    $password = $_POST["password"];
 
     require_once 'DataBaseConnection.php';
     require_once 'Functions.inc.php';
 
 
-    if (emptyInputLogIn($name, $password,) !== false) {
+    if (emptyInputLogIn($name, $password) !== false) {
         header("location: ../site/LogIn.php?error=emptyinput");
         exit();
     }
