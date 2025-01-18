@@ -1,6 +1,3 @@
-<?php
-    session_start();
-?>
 <header>
     <!-- სიის აიკონი -->
     <img class="language_Profile_List" id="ListIcon" src="../Images/Icons/ListIcon.png" alt="List Icon">
@@ -118,19 +115,19 @@
             </b>
         </div>
         <div class="autorisation-div">
-            
+
             <div class="mob-reg-divs">
                 <?php
-                    if(isset($_SESSION["username"])){
-                        echo "<div class='mob-reg-divs'>
-                                <a href='../Site/LogIn.php'>
+                if (isset($_SESSION["userID"]) && isset($_SESSION['username'])) {
+                    echo    "<form action='../Includes/LogOut.php' method='POST' class='mob-reg-divs'>
+                                <button id='LogoutButton' name='LogoutButton'>
                                     <b id='m'>
                                         Log Out
                                     </b>
-                                </a>
-                            </div>";
-                    }else{
-                        echo "<div class='mob-reg-divs'>
+                                </button>
+                            </form>";
+                } else {
+                    echo    "<div class='mob-reg-divs'>
                                 <a href='../Site/Registration.php'>
                                     <b id='l'>
                                         Register
@@ -144,8 +141,9 @@
                                     </b>
                                 </a>
                             </div>";
-                    }
+                }
                 ?>
+
             </div>
         </div>
         <div class="ChangeLanguage-mobile">
@@ -166,21 +164,34 @@
         </div>
     </div>
     <!-- ტელეფონის მენიუ (დასასრული) -->
-    <div id="profile">
-        <a href="../Site/Registration.php" id="reg-link">
-            <div id="Registration">
-                <b id="j">
-                    Register
-                </b>
-            </div>
-        </a>
-        <a href="../Site/LogIn.php" id="log-link">
-            <div id="Log-in">
-                <b id="k">
-                    Log in
-                </b>
-            </div>
-        </a>
+    <div id="profile" style="display: none;">
+        <?php
+            if (isset($_SESSION["userID"]) && isset($_SESSION['username'])) {
+            echo    "<form action='../Includes/LogOut.php' method='POST' class='mob-reg-divs'>
+                        <button id='LogoutButtone' name='LogoutButton'>
+                            <b id='m'>
+                                Log Out
+                            </b>
+                        </button>
+                    </form>";
+                } else {
+                    echo "<a href='../Site/Registration.php' id='reg-link'>
+                            <div id='Registration'>
+                                <b id='j'>
+                                    Register
+                                </b>
+                            </div>
+                        </a>
+                        <a href='../Site/LogIn.php' id='log-link'>
+                            <div id='Log-in'>
+                                <b id='k'>
+                                    Log in
+                                </b>
+                            </div>
+                        </a>";
+                }
+        ?>
+
     </div>
     <div id="ChangeLanguage">
         <div id="Georgian" onclick="ChangeLanguageToGeorgian()">

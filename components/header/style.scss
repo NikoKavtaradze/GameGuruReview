@@ -237,7 +237,24 @@ body {
             transition: 0.3s;
             z-index: 1000;
 
-
+            form{
+                #LogoutButtone{
+                    background-color: rgb(36, 36, 36);
+                    color: white;
+                    padding: 10px;
+                    border-radius: 15px;
+                    cursor: pointer;
+                    width: 180px;
+                    height: 40px;
+                    border: 0;
+                    font-weight: 700;
+                    font-size: 15px;
+                }
+                #LogoutButtone:hover{
+                    background-color: rgb(50, 50, 50);
+                    
+                }
+            }
             #Registration {
                 background-color: rgb(36, 36, 36);
                 padding: 10px;
@@ -323,14 +340,37 @@ body {
                 flex-direction: row;
                 justify-content: space-around;
                 margin-bottom: 20px;
+                width: 100%;
 
                 .mob-reg-divs {
                     display: flex;
                     text-align: center;
                     background-color: rgb(36, 36, 36);
-                    width: 40%;
+                    width: 90%;
                     border-radius: 15px;
+                    
+                    form{
+                        width: 100%;
 
+                        #LogoutButton{
+                            display: flex;
+                            text-align: center;
+                            justify-content: center;
+                            padding: 20px 0px 20px 0px;
+                            background-color: rgb(36, 36, 36);
+                            margin: 0;
+                            border: 0;
+                            border-radius: 15px;
+                            width: 100%;
+                            color: white;
+                            font-weight: bold;  
+                        }
+                        #LogoutButton:hover{
+                            background-color: rgb(50, 50, 50);
+                            cursor: pointer;
+                        }
+                    }
+                    
                     a {
                         padding: 20px 0px 20px 0px;
                         width: 100%;
@@ -340,10 +380,10 @@ body {
                 }
 
                 .mob-reg-divs:hover {
-                    background-color: white;
+                    background-color: rgb(50, 50, 50);
 
                     a {
-                        color: black;
+                        color: white;
                     }
                 }
             }
