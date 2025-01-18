@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../CSS/News.css">
 <link rel="stylesheet" href="../CSS/reset.css">
 
-<form action="" id="addReviewInc" method="POST">
+<form action="" id="addReviewInc" method="POST" enctype="multipart/form-data">
     <header>
         <b>
             <h1>
@@ -18,7 +18,7 @@
                     </b>
                 </h1>
             </div>
-            <input type="file" id="choose_photo">
+            <input type="file" id="choose_photo" name="Review_photo" />
         </div>
         <div id='dima'>
             <div id="Review_title">
@@ -47,10 +47,3 @@
         </h1>
     </button>
 </form>
-<?php
-    if(isset($_POST['addReviewButton'])){
-        if (isset($_SESSION["userID"]) && isset($_SESSION['username'])){
-            
-        }
-    }
-?>
