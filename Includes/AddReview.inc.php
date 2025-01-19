@@ -1,7 +1,8 @@
+
 <link rel="stylesheet" href="../CSS/News.css">
 <link rel="stylesheet" href="../CSS/reset.css">
 
-<form action="" id="addReviewInc" method="POST" enctype="multipart/form-data">
+<form action="../Includes/AddReview.logic.php" id="addReviewInc" method="POST" enctype="multipart/form-data">
     <header>
         <b>
             <h1>
@@ -35,11 +36,11 @@
                         Text
                     </b>
                 </h1>
-                <textarea name="Review_text" id="" placeholder="Review Text"></textarea>
+                <textarea name="Review-text" id="" placeholder="Review Text"></textarea>
             </div>
         </div>
     </div>
-    <button id="addReviewButton">
+    <button id="addReviewButton" name="addReviewButton">
         <h1>
             <b>
                 Add Review
@@ -47,3 +48,7 @@
         </h1>
     </button>
 </form>
+<?php
+
+?>
+

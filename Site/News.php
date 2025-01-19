@@ -21,6 +21,14 @@ session_start();
 <body>
     <!-- ჰედერი --><?php include "../components/header/header.php"; ?><!-- /ჰედერი -->
     <main>
+        <?php
+            if (isset($_SESSION['userID']) && isset($_SESSION['username'])) {
+                $username = $_SESSION['username'];
+                echo "<h1 class='helo'>Welcome</h1> " . "<h1 class='helo'>" . htmlspecialchars($username) . "</h1>";
+            } else {
+                echo "You are not logged in.";
+            }
+        ?>
         <form id="addReviewBtn" action="" method="POST">
             <button name="addNewReview">
                 +

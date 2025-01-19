@@ -5,7 +5,7 @@
     <!-- დივი, რომელიც მთავარ ლოგოს და მის დეკორაციას ინახავს -->
     <div id="L-D-Frame">
         <!-- მთავარი ლოგო -->
-        <a id="main_logo_a" href="../Site/MainPage.php">
+        <a id="main_logo_a" href="../Site/index.php">
             <img id="main_logo" src="../Images/Logo images/logo.png" alt="logo">
         </a>
         <!-- დეკორაცია -->

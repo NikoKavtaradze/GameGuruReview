@@ -3,7 +3,7 @@
         session_start();
         session_unset();
         session_destroy();
-        header("Location: ../Site/MainPage.php?status=loggedOut");
+        header("Location: ../Site/index.php?status=loggedOut");
         exit();
     }
 ?>

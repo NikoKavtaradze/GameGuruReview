@@ -74,7 +74,7 @@ function createUser($conn, $name, $email, $password){
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
-    header("location: ../site/MainPage.php?status=SuccessfulyRegistered");
+    header("location: ../site/index.php?status=SuccessfulyRegistered");
     exit();
 }
 
@@ -105,7 +105,8 @@ function LoginUser($conn, $name, $password){
         $_SESSION['userID'] = $userExists['user_id'];
         $_SESSION['username'] = $userExists['username'];
 
-        header("location: ../site/MainPage.php?status=LoggedIn");
+        header("location: ../site/index.php?status=LoggedIn");
         exit();
     }
 }
+

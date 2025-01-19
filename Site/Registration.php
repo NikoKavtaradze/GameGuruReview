@@ -12,7 +12,7 @@
 
 <body>
     <div id="wrapper">
-        <a href="MainPage.php">
+        <a href="index.php">
             <img src="../Images/Logo images/logo.png" alt="Game Guru Reviews Logo">
         </a>
         <h1>
